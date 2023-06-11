@@ -2,7 +2,6 @@ package domain.model
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.assertThrows
 
 class CarTest {
     @Test
@@ -11,21 +10,9 @@ class CarTest {
         val carName = "name1"
 
         // when
-        val car = Car(carName)
+        val car = Car(name = CarName(carName))
 
         // then
-        assertThat(car.name).isEqualTo(carName)
-    }
-
-    @Test
-    fun `자동차의 이름은 5글자를 넘지 않는다`() {
-        // given
-        val carName = "sixLen"
-
-        // when
-        val errorMessage = assertThrows<IllegalArgumentException> { Car(carName) }.message
-
-        // then
-        assertThat(errorMessage).isEqualTo("[잘못된 이름: $carName] 자동차의 이름은 5글자를 넘지 않아야합니다.")
+        assertThat(car.name.value).isEqualTo(carName)
     }
 }
