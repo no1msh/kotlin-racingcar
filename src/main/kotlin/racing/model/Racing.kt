@@ -1,4 +1,4 @@
-package domain.model
+package racing.model
 
 class Racing(
     val cars: List<Car>,

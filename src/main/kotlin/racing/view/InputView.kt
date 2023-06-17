@@ -1,4 +1,4 @@
-package domain.view
+package racing.view
 
 object InputView {
     fun requestCarNames(): List<String> {

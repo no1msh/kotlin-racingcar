@@ -1,6 +1,6 @@
-package domain.view
+package racing.view
 
-import domain.model.Car
+import racing.model.Car
 
 object OutputView {
     private const val WINNER_NAMES_SEPARATOR = ", "

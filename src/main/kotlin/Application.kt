@@ -1,4 +1,4 @@
-import domain.controller.RacingController
+import racing.controller.RacingController
 
 fun main() {
     RacingController().startGame()

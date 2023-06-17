@@ -1,4 +1,4 @@
-package domain.model
+package racing.model
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test

@@ -1,11 +1,11 @@
-package domain.controller
+package racing.controller
 
-import domain.model.Car
-import domain.model.CarName
-import domain.model.Racing
-import domain.model.RandomNumberGenerator
-import domain.view.InputView
-import domain.view.OutputView
+import racing.model.Car
+import racing.model.CarName
+import racing.model.Racing
+import racing.model.RandomNumberGenerator
+import racing.view.InputView
+import racing.view.OutputView
 
 class RacingController {
     private val cars: List<Car> = initCars()
