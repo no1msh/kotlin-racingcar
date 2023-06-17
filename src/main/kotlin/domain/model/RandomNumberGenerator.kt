@@ -1,13 +1,12 @@
 package domain.model
 
-import java.util.Random
-
 class RandomNumberGenerator : NumberGenerator {
     override fun generate(): Int {
-        return Random().nextInt(RANDOM_RANGE)
+        return (MIN_NUMBER..MAX_NUMBER).random()
     }
 
     companion object {
-        private const val RANDOM_RANGE = 10
+        private const val MIN_NUMBER = 0
+        private const val MAX_NUMBER = 9
     }
 }
