@@ -1,7 +1,6 @@
 package domain.view
 
 import domain.model.Car
-import domain.model.CarName
 
 object OutputView {
     private const val WINNER_NAMES_SEPARATOR = ", "
@@ -16,17 +15,18 @@ object OutputView {
     }
 
     fun printRacingResult() {
+        println()
         println("실행 결과")
     }
 
     fun printCurrentProgress(cars: List<Car>) {
         cars.forEach {
-            println("${it.name} : ${POSITION_DISPLAY.repeat(it.position)}")
+            println("${it.name.value} : ${POSITION_DISPLAY.repeat(it.position)}")
         }
         println()
     }
 
-    fun printWinners(winnerNames: List<CarName>) {
+    fun printWinners(winnerNames: List<String>) {
         println("최종 우승자: ${winnerNames.joinToString(WINNER_NAMES_SEPARATOR)}")
     }
 }
