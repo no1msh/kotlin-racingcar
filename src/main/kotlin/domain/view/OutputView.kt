@@ -14,6 +14,10 @@ object OutputView {
         println("시도할 횟수는 몇 회인가요?")
     }
 
+    fun printExceptionMessage(message: String?) {
+        println(message)
+    }
+
     fun printRacingResult() {
         println()
         println("실행 결과")
